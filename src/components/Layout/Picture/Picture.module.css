@@ -1,0 +1,20 @@
+.Picture {
+    border-radius: 50%;
+    background-color: #EBF4FA;
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    padding: 0px;
+    background-image: url('./me.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0 0 5px #206BA4);
+}
+
+.Picture img {
+    width: 90%;
+    padding-top: 90%;
+    border-radius: 50%;
+    background-image: './me.jpeg';
+}

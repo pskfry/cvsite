@@ -1,0 +1,7 @@
+.Project {
+    box-shadow: 5px 5px 5px 0 #eee;
+    border: 2px solid #eee;
+    padding: 25px;
+    margin: 25px;
+    float: left;
+}

@@ -1,0 +1,46 @@
+.MainNav {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.MainNav ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.MainNav li {
+    display: inline-block;
+    height: 25px;
+    padding: 15px;
+}
+
+.MainNav a {
+    position: relative;
+    text-decoration: none;
+    color: #206BA4;
+    transition: color .4s ease-out;
+}
+
+.MainNav a:hover {
+    color: #C0C0C0;
+}
+
+.MainNav a::after {
+    border-top: .1em solid #E7E4D3;
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: -.1em;
+    left: 0;
+    transition: right .4s cubic-bezier(0,0.5,0,1);
+}
+
+.MainNav a:hover::after {
+    right: 0;   
+}
+
+.ActiveNav {
+    color: #C0C0C0 !important;
+    text-decoration: underline !important;
+}

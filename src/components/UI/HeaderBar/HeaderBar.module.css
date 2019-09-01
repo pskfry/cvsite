@@ -1,0 +1,12 @@
+.HeaderBar {
+    height: 20px;
+    font-size: 10px;
+    text-align: right;
+    background-color: #F1EFE2;
+    color: #206BA4;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
