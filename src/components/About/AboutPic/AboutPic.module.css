@@ -1,0 +1,10 @@
+.AboutImg {
+    background-image: url('../../../assets/about.jpg');
+    background-position-x: 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0 0 5px #206BA4);
+    height: 300px;
+    width: 100px;
+    margin-right: 25px;
+}

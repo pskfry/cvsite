@@ -1,0 +1,25 @@
+.TechSearch {
+    width: 100%;
+    text-align: center;
+}
+
+.IconSpan {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #123C69;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.IconSpan svg {
+    display: inline-block;
+    vertical-align: top;
+    padding: 9.5px;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.IconSpan svg:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+}

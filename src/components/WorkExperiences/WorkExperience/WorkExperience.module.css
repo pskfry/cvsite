@@ -1,0 +1,58 @@
+@media(min-width: 501px) {
+    .WorkExperience {
+        text-align: left;
+        padding: 25px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 500px) {
+    .WorkExperience {
+        text-align: left;
+        padding: 25px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.Titles {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.Titles h1 {
+    color: #123C69;
+    padding-bottom: 5px;
+    margin: 0px;
+}
+
+.Titles h3 {
+    color: #BAB2B5;
+    padding-bottom: 5px;
+    margin: 0px;
+}
+
+.Titles h5 {
+    color: #C0C0C0;
+    padding: 0px;
+    margin: 0px;
+}
+
+.WorkExperience img {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.Tech {
+    background-color: #EEE2DC;
+    color: #AC3B61;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 5px;
+}

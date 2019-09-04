@@ -1,16 +1,27 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import Projects from '../components/Projects/Projects';
-import Content from '../components/UI/Content/Content';
-import MainNav from '../components/UI/MainNav/MainNav';
-import Picture from '../components/Layout/Picture/Picture';
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import Projects from './Projects/Projects';
+import MainNav from "../components/Layout/MainNav/MainNav";
+import Picture from "../components/UI/Picture/Picture";
+import TopBuffer from "../components/UI/TopBuffer/TopBuffer";
+import Content from "../components/Layout/Content/Content";
+import Notifications from 'react-notify-toast';
+import WorkExperiences from '../components/WorkExperiences/WorkExperiences';
+import About from "../components/About/About";
 
 function App() {
   return (
     <React.Fragment>
+      <TopBuffer />
       <BrowserRouter>
-      <Picture />
-      <MainNav />
+        <Picture />
+        <MainNav />
+        <Notifications />
+        <Content>
+          <Route path="/projects" component={Projects} />
+          <Route path="/work" component={WorkExperiences} />
+          <Route path="/" component={About} />
+        </Content>
       </BrowserRouter>
     </React.Fragment>
   );

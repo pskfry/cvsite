@@ -1,0 +1,19 @@
+div.FilterResults {
+    width: 100%;
+    text-align: center;
+}
+
+.FilterResults h2 {
+    color: #123C69;
+    font-size: 20px;
+}
+
+.FilterResults span {
+    color: #BAB2B5;
+    font-size: 14px;
+}
+
+.FilterResults span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

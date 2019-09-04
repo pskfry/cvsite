@@ -1,0 +1,41 @@
+.container {
+    width: 264px;
+    display: inline-block;
+}
+
+.container ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -2px;
+    margin-right: -1px;
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.input {
+    padding: 8px;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: 14px;
+    width: 250px;
+    border-radius: 3px;
+    border: 1px solid #c0c0c0;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.suggestion {
+    color: #AC3B61;
+    padding: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.suggestionHighlighted {
+    background-color: #eee2dc;
+}

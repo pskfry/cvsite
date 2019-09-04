@@ -1,6 +1,6 @@
 .MainNav {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 25px;
     text-align: center;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .MainNav a::after {
-    border-top: .1em solid #E7E4D3;
+    border-top: .15em solid #C0C0C0;
     content: "";
     position: absolute;
     right: 100%;
@@ -37,10 +37,11 @@
 }
 
 .MainNav a:hover::after {
-    right: 0;   
+    right: 0;  
 }
 
-.ActiveNav {
-    color: #C0C0C0 !important;
-    text-decoration: underline !important;
+.MainNav a:active {
+    color: #C0C0C0;
+    border: unset;
+    text-decoration: underline;
 }
