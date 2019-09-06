@@ -1,0 +1,38 @@
+@keyframes growIn {
+    0% {
+        transform: scale(0);
+        border-radius: 50%;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 5px;
+    }
+}
+
+.Picture {
+    border-radius: 5px;
+    background-color: #EBF4FA;
+    width: 300px;
+    height: 400px;
+    margin: 25px auto;
+    padding: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0 0 5px #206BA4);
+    display: flex;
+    flex-direction: column-reverse;
+    animation: growIn 0.4s ease-out;
+}
+
+.Picture p {
+    margin: 5px;
+    padding: 5px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-weight: bold;
+    display: block;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    text-align: justify;
+    font-size: 12px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Project from "./Project/Project";
+import Project from '../../components/Project/Project';
 import { notify } from "react-notify-toast";
-import TechSearch from "./TechSearch/TechSearch";
+import TechSearch from "../TechSearch/TechSearch";
 import classes from './Projects.module.css';
 
 class Projects extends Component {

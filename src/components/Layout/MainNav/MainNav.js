@@ -14,7 +14,7 @@ const MainNav = () => (
                 <li><NavLink to="/projects" activeStyle={activeStyle} >projects</NavLink></li>
                 <li><NavLink to="/work" activeStyle={activeStyle}>work experience</NavLink></li>
                 <li><NavLink to="/contact" activeStyle={activeStyle}>contact</NavLink></li>
-                <li><NavLink to="/" activeStyle={activeStyle}>about</NavLink></li>
+                <li><NavLink exact to="/" activeStyle={activeStyle}>about</NavLink></li>
             </ul>
         </div>
     </nav>

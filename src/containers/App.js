@@ -8,6 +8,7 @@ import Content from "../components/Layout/Content/Content";
 import Notifications from 'react-notify-toast';
 import WorkExperiences from '../components/WorkExperiences/WorkExperiences';
 import About from "../components/About/About";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Content>
           <Route path="/projects" component={Projects} />
           <Route path="/work" component={WorkExperiences} />
-          <Route path="/" component={About} />
+          <Route path="/contact" component={ContactForm} />
+          <Route path="/" exact component={About} />
         </Content>
       </BrowserRouter>
     </React.Fragment>
