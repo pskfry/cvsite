@@ -43,6 +43,7 @@ div.Project:hover {
 }
 
 .Project h1 {
+    font-family: 'Exo', sans-serif;
     font-size: 24px;
     color: #AC3B61;
     animation-name: popIn;
@@ -57,4 +58,5 @@ div.Project:hover {
     text-align: left;
     padding: 8px;
     border-radius: 5px;
+    font-family: 'Rokkitt', sans-serif;
 }

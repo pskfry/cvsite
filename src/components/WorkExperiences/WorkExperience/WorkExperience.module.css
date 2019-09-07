@@ -5,6 +5,7 @@
         width: 50%;
         display: flex;
         flex-wrap: wrap;
+        font-family: 'Ubuntu', sans-serif;
     }
 }
 
@@ -15,6 +16,7 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        font-family: 'Ubuntu', sans-serif;
     }
 }
 
@@ -28,18 +30,21 @@
     color: #123C69;
     padding-bottom: 5px;
     margin: 0px;
+    font-family: 'Exo', sans-serif;
 }
 
 .Titles h3 {
     color: #BAB2B5;
     padding-bottom: 5px;
     margin: 0px;
+    font-family: 'Exo', sans-serif;
 }
 
 .Titles h5 {
     color: #C0C0C0;
     padding: 0px;
     margin: 0px;
+    font-family: 'Exo', sans-serif;
 }
 
 .WorkExperience img {
@@ -55,4 +60,5 @@
     margin: 0 auto;
     padding: 15px;
     border-radius: 5px;
+    font-family: 'Rokkitt', sans-serif;
 }
