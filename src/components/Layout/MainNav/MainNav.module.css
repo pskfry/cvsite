@@ -2,6 +2,8 @@
     width: 100%;
     margin-top: 25px;
     text-align: center;
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
 }
 
 .MainNav ul {
@@ -18,16 +20,16 @@
 .MainNav a {
     position: relative;
     text-decoration: none;
-    color: #206BA4;
+    color: #123c69;
     transition: color .4s ease-out;
 }
 
 .MainNav a:hover {
-    color: #C0C0C0;
+    color: #ac3b61;
 }
 
 .MainNav a::after {
-    border-top: .15em solid #C0C0C0;
+    border-top: .15em solid #BAB2B5;
     content: "";
     position: absolute;
     right: 100%;
@@ -38,10 +40,4 @@
 
 .MainNav a:hover::after {
     right: 0;  
-}
-
-.MainNav a:active {
-    color: #C0C0C0;
-    border: unset;
-    text-decoration: underline;
 }

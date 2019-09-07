@@ -3,8 +3,7 @@ import classes from './MainNav.module.css';
 import { NavLink } from 'react-router-dom';
 
 const activeStyle = {
-    borderBottom: '.05em dashed #C0C0C0',
-    color: '#C0C0C0',
+    borderBottom: '.15em solid #BAB2B5',
 }
 
 const MainNav = () => (
