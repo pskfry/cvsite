@@ -14,7 +14,13 @@ class Picture extends Component {
     }
 
     render () {
-        let pic = <div className = {classes.Picture} onClick={this.picFlipper} />
+        let pic = (
+            <div className={classes.Picture} onClick={this.picFlipper}>
+                <div className={classes.PictureHover} onClick={this.picFlipper}>
+                    <span>Click Me</span>
+                </div>
+            </div>
+                );
 
         if (this.state.showFull) {
             pic = <MovieNights clicker={this.picFlipper} />

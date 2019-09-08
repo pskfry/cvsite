@@ -1,35 +1,26 @@
 import React, { Component } from "react";
 import WorkExperience from "./WorkExperience/WorkExperience";
+import Axios from "axios";
 
 class WorkExperiences extends Component {
   state = {
-    experiences: [
-      {
-        id: 1,
-        header: "Allstate",
-        title: "Application Developer",
-        start: "8/6/2018",
-        end: "current",
-        desc:
-          "Working in the Brand Operations business on an agile team developing automations for our customer service departments",
-        logo:
-          "https://www.underconsideration.com/brandnew/archives/allstate_icon_detail.png",
-        techs: [".net", "c#", "wpf", "sql", "pega", "blue prism", "react"]
-      },
-      {
-        id: 2,
-        header: ".NET Consultant",
-        title: "Contractor",
-        start: "5/5/2015",
-        end: "current",
-        desc:
-          "Worked as a contractor for a small start-up shop. Worked on the Billboard web application and their mobile DJ application. Also did work for DealerCue on their web crawler.",
-        logo:
-          "https://i.ytimg.com/vi/8bt7epRZ2jU/maxresdefault.jpg",
-        techs: ["asp.net", "c#", "sql", "flutter"]
-      }
-    ]
+    experiences: []
   };
+
+  componentDidMount () {
+    Axios.get('https://cvsite-80b2f.firebaseio.com/workexp.json').then(res => {
+      const expKeys = Object.keys(res.data);
+      let exps = [];
+
+      expKeys.forEach(expKey => {
+        exps.push(res.data[expKey]);
+      });
+
+      this.setState({
+        experiences: exps
+      });
+    });
+  }
 
   render() {
     const experiences = this.state.experiences.map(exp => {

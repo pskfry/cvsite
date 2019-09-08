@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AboutPic from "./AboutPic/AboutPic";
 import classes from "./About.module.css";
+import Axios from "axios";
 
 const About = () => {
-  var age = new Date().getFullYear() - 1987;
-  var devAge = new Date().getFullYear() - 2013;
+  const [paras, setParas] = useState([]);
+
+  useEffect(() => {
+    Axios.get('https://cvsite-80b2f.firebaseio.com/aboutparas.json').then(res => {
+      const paraKeys = Object.keys(res.data);
+      let paraList = [];
+
+      console.log(paraKeys);
+
+      paraKeys.forEach(pKey => {
+        paraList.push(res.data[pKey]);
+      });
+
+      paraList.sort((a, b) => {
+        return a.id < b.id ? -1 : 1;
+      })
+
+      setParas(paraList);
+    })
+  }, []);
+
+  const paraDisplayList = paras.map(para => {
+    return <p key={para.id}>{para.text}</p>
+  });
 
   return (
     <div className={classes.About}>
@@ -12,17 +35,7 @@ const About = () => {
       <div className={classes.Titles}>
         <h1>Jason M. Fry</h1>
         <h2>Full Stack Developer</h2>
-        <p>
-          I am a {age} year old developer currently living in Charlotte, NC. I
-          was born just outside of Chicago, IL, went to Bradley University for
-          History. I have been working as a developer for {devAge} years.
-        </p>
-        <p>
-          I am trained and have experience as a full stack developer, but if I
-          have my choice, I prefer working on front-end projects. I love finding
-          creative ways to implement a designer's vision and even contributing
-          my own design elements where they make sense.
-        </p>
+        {paraDisplayList}
       </div>
     </div>
   );

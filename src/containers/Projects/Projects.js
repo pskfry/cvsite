@@ -1,40 +1,13 @@
 import React, { Component } from "react";
-import Project from '../../components/Project/Project';
+import Project from "../../components/Project/Project";
 import { notify } from "react-notify-toast";
 import TechSearch from "../TechSearch/TechSearch";
-import classes from './Projects.module.css';
+import classes from "./Projects.module.css";
+import Axios from "axios";
 
 class Projects extends Component {
   state = {
-    projects: [
-      {
-        id: 1,
-        name: "dating app",
-        techWords: [
-          "angular",
-          ".net core",
-          "entity framework",
-          "sql",
-          "RESTful api"
-        ],
-        description:
-          "Dating app with messaging, friends lists, search and filtering written in Angular with a .net core API."
-      },
-      {
-        id: 2,
-        name: "cv site",
-        techWords: ["react", "mongodb", "firebase"],
-        description:
-          "The site you're currently viewing, made entirely in React. Firebase/mongodb backend."
-      },
-      {
-        id: 3,
-        name: "burger builder",
-        techWords: ["react", "mongodb", "firebase"],
-        description:
-          "Interactive burger builder with checkout functionality. Firebase/mongodb backend."
-      }
-    ],
+    projects: [],
     searchTechWord: null
   };
 
@@ -58,6 +31,19 @@ class Projects extends Component {
 
   componentDidMount() {
     notify.show("click on a project card to check it out!", "info", 4000);
+
+    Axios.get("https://cvsite-80b2f.firebaseio.com/projects.json").then(res => {
+      const projKeys = Object.keys(res.data);
+      let projList = [];
+
+      projKeys.forEach(projKey => {
+        projList.push(res.data[projKey]);
+      });
+
+      this.setState({
+        projects: projList
+      });
+    });
   }
 
   render() {
@@ -71,13 +57,14 @@ class Projects extends Component {
 
     const projectList = filteredProjects.map(proj => {
       return (
-        <Project
-          name={proj.name}
-          techWords={proj.techWords}
-          description={proj.description}
-          key={proj.id}
-          searchTech={event => this.searchTechHandler(event)}
-        />
+        <a href={proj.url} key={proj.id} target="_blank" rel="noopener noreferrer">
+          <Project
+            name={proj.name}
+            techWords={proj.techWords}
+            description={proj.description}
+            searchTech={event => this.searchTechHandler(event)}
+          />
+        </a>
       );
     });
 

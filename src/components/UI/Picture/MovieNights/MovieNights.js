@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import classes from "./MovieNights.module.css";
+import InvisBackdrop from "../../InvisBackdrop/InvisBackdrop";
 
 const movieNightImages = require.context("../../../../assets", true);
 
@@ -17,15 +18,19 @@ class MovieNights extends Component {
 
   render() {
     return (
-      <div
-        className={classes.Picture}
-        onClick={this.props.clicker}
-        style={{
-          backgroundImage: `url(${movieNightImages(this.state.movieNights[0].image)}`
-        }}
-      >
-        <p>{decodeURI(this.state.movieNights[0].para)}</p>
-      </div>
+      <React.Fragment>
+        <InvisBackdrop clicker={this.props.clicker} />
+        <div
+          className={classes.Picture}
+          style={{
+            backgroundImage: `url(${movieNightImages(
+              this.state.movieNights[0].image
+            )}`
+          }}
+        >
+          <p>{decodeURI(this.state.movieNights[0].para)}</p>
+        </div>
+      </React.Fragment>
     );
   }
 }

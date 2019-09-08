@@ -1,43 +1,49 @@
 .MainNav {
-    width: 100%;
-    margin-top: 25px;
-    text-align: center;
-    font-family: 'Exo', sans-serif;
-    font-weight: bold;
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  border-top: 1px solid #cccc;
+  border-bottom: 1px solid #cccc;
 }
 
 .MainNav ul {
-    list-style: none;
-    padding: 0px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 .MainNav li {
-    display: inline-block;
-    height: 25px;
-    padding: 15px;
+  display: inline-block;
+  height: 25px;
+  padding: 15px;
+  margin: 0px;
 }
 
 .MainNav a {
-    position: relative;
-    text-decoration: none;
-    color: #123c69;
-    transition: color .4s ease-out;
+  position: relative;
+  text-decoration: none;
+  color: #123c69;
+  transition: color 0.4s ease-out;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
 }
 
 .MainNav a:hover {
-    color: #ac3b61;
+  color: #ac3b61;
 }
 
 .MainNav a::after {
-    border-top: .15em solid #BAB2B5;
-    content: "";
-    position: absolute;
-    right: 100%;
-    bottom: -.1em;
-    left: 0;
-    transition: right .4s cubic-bezier(0,0.5,0,1);
+  border-top: 0.15em solid #bab2b5;
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: -0.1em;
+  left: 0;
+  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
 }
 
 .MainNav a:hover::after {
-    right: 0;  
+  right: 0;
 }

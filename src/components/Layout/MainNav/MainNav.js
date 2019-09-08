@@ -7,15 +7,13 @@ const activeStyle = {
 }
 
 const MainNav = () => (
-    <nav>
-        <div className={classes.MainNav}>
-            <ul>
-                <li><NavLink to="/projects" activeStyle={activeStyle}><span>personal projects</span></NavLink></li>
-                <li><NavLink to="/work" activeStyle={activeStyle}><span>work experience</span></NavLink></li>
-                <li><NavLink to="/contact" activeStyle={activeStyle}><span>contact</span></NavLink></li>
-                <li><NavLink exact to="/" activeStyle={activeStyle}><span>about</span></NavLink></li>
-            </ul>
-        </div>
+    <nav className={classes.MainNav}>
+        <ul>
+            <li><NavLink to="/projects" activeStyle={activeStyle}><span>personal projects</span></NavLink></li>
+            <li><NavLink to="/work" activeStyle={activeStyle}><span>work experience</span></NavLink></li>
+            <li><NavLink to="/contact" activeStyle={activeStyle}><span>contact</span></NavLink></li>
+            <li><NavLink exact to="/" activeStyle={activeStyle}><span>about</span></NavLink></li>
+        </ul>
     </nav>
 );
 

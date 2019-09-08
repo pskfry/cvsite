@@ -5,7 +5,7 @@ const WorkExperience = props => {
   return (
     <div className={classes.WorkExperience}>
       <img src={props.logo} alt="explogo" />
-      <div class={classes.Titles}>
+      <div className={classes.Titles}>
         <h1>{props.header}</h1>
         <h3>{props.title}</h3>
         <h5>

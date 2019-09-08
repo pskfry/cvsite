@@ -14,7 +14,7 @@ const TechWord = props => {
       <span
         onClick={props.searcher}
         value={props.text}
-        class={classes.TechWord}
+        className={classes.TechWord}
       >
         {props.text}
       </span>
