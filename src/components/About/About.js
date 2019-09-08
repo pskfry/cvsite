@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import AboutPic from "./AboutPic/AboutPic";
 import classes from "./About.module.css";
 import Axios from "axios";
+import Spinner from "../UI/Spinner/Spinner";
 
 const About = () => {
   const [paras, setParas] = useState([]);
+  const [loaded, setLoaded] = useState();
 
   useEffect(() => {
+    setLoaded(false);
+
     Axios.get('https://cvsite-80b2f.firebaseio.com/aboutparas.json').then(res => {
       const paraKeys = Object.keys(res.data);
       let paraList = [];
@@ -22,12 +26,17 @@ const About = () => {
       })
 
       setParas(paraList);
+      setLoaded(true);
     })
   }, []);
 
-  const paraDisplayList = paras.map(para => {
-    return <p key={para.id}>{para.text}</p>
-  });
+  let paraDisplayList = <Spinner />
+
+  if (loaded) {
+    paraDisplayList = paras.map(para => {
+      return <p key={para.id}>{para.text}</p>
+    });
+  }
 
   return (
     <div className={classes.About}>
