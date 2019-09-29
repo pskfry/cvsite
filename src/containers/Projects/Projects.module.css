@@ -17,3 +17,7 @@ div.FilterResults {
     text-decoration: underline;
     cursor: pointer;
 }
+
+a {
+    color: darkblue;
+}
