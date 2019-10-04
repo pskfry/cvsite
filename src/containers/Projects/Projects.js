@@ -29,6 +29,12 @@ class Projects extends Component {
     });
   };
 
+  searchTechButtonHandler = searchWord => {
+    this.setState({
+      searchTechWord: searchWord
+    });
+  };
+
   clearSearch = () => {
     this.setState({
       searchTechWord: null
@@ -67,27 +73,29 @@ class Projects extends Component {
 
       projectList = filteredProjects.map(proj => {
         return (
-            <Project
-              name={proj.name}
-              techWords={proj.techWords}
-              description={proj.description}
-              github={proj.github}
-              searchTech={event => this.searchTechHandler(event)}
-              key={proj.id}
-              href={proj.url}
-            />
+          <Project
+            name={proj.name}
+            techWords={proj.techWords}
+            description={proj.description}
+            github={proj.github}
+            searchTech={event => this.searchTechHandler(event)}
+            key={proj.id}
+            href={proj.url}
+          />
         );
       });
     }
 
     return (
       <React.Fragment>
-        <TechSearch selector={event => this.searchTechEventHandler(event)} />
+        <TechSearch selector={event => this.searchTechEventHandler(event)} buttonSelector={this.searchTechButtonHandler} />
         {this.state.searchTechWord ? (
           <div className={classes.FilterResults}>
             <h2>
               projects using '{this.state.searchTechWord}'
-              <span onClick={this.clearSearch} style={{marginLeft: "10px"}}>(show all)</span>
+              <span onClick={this.clearSearch} style={{ marginLeft: "10px" }}>
+                (show all)
+              </span>
             </h2>
           </div>
         ) : null}
