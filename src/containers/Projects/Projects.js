@@ -14,12 +14,16 @@ class Projects extends Component {
   };
 
   searchTechEventHandler = event => {
+    event.stopPropagation();
+
     this.setState({
       searchTechWord: event.target.innerText
     });
   };
 
   searchTechHandler = event => {
+    event.stopPropagation();
+
     this.setState({
       searchTechWord: event.target.attributes.value.value
     });
@@ -63,19 +67,15 @@ class Projects extends Component {
 
       projectList = filteredProjects.map(proj => {
         return (
-          <a
-            href={proj.url}
-            key={proj.id}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
             <Project
               name={proj.name}
               techWords={proj.techWords}
               description={proj.description}
+              github={proj.github}
               searchTech={event => this.searchTechHandler(event)}
+              key={proj.id}
+              href={proj.url}
             />
-          </a>
         );
       });
     }
@@ -87,7 +87,7 @@ class Projects extends Component {
           <div className={classes.FilterResults}>
             <h2>
               projects using '{this.state.searchTechWord}'
-              <span onClick={this.clearSearch}>(show all)</span>
+              <span onClick={this.clearSearch} style={{marginLeft: "10px"}}>(show all)</span>
             </h2>
           </div>
         ) : null}

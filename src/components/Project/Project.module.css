@@ -60,3 +60,19 @@ div.Project:hover {
     border-radius: 5px;
     font-family: 'Rokkitt', sans-serif;
 }
+
+.Project button {
+    border: 1px solid #AC3B61;
+    border-radius: 5px;
+    background-color: #dd4b7c;
+    transition: background-color 0.4s ease-out;
+    color: white;
+    font-family: 'Rokkitt', sans-serif;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.Project button:hover {
+    background-color: #AC3B61;
+    cursor: pointer;
+}

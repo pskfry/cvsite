@@ -15,8 +15,6 @@ const About = () => {
       const paraKeys = Object.keys(res.data);
       let paraList = [];
 
-      console.log(paraKeys);
-
       paraKeys.forEach(pKey => {
         paraList.push(res.data[pKey]);
       });
