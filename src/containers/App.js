@@ -10,13 +10,14 @@ import WorkExperiences from "../containers/WorkExperiences/WorkExperiences";
 import About from "../components/About/About";
 import ContactForm from "../components/ContactForm/ContactForm";
 import classes from "./App.module.css";
+import NewProject from "../components/Admin/NewProject";
 
 function App() {
   return (
     <React.Fragment>
       <TopBuffer />
       <BrowserRouter>
-          <Picture />
+        <Picture />
         <div className={classes.NavBox}>
           <MainNav />
         </div>
@@ -25,6 +26,7 @@ function App() {
           <Route path="/projects" component={Projects} />
           <Route path="/work" component={WorkExperiences} />
           <Route path="/contact" component={ContactForm} />
+          <Route path="/admin" component={NewProject} />
           <Route path="/" exact component={About} />
         </Content>
       </BrowserRouter>

@@ -1,42 +1,32 @@
-@media(min-width: 800px) {
-    .About {
-        display: flex;
-        width: 50%;
-        margin-top: 20px;
-    }
-}
-
-@media(max-width: 799px) {
-    .About {
-        display: flex;
-        width: 90%;
-        margin-top: 20px;
-    }
+.About {
+  display: flex;
+  min-width: 200px;
+  margin: 25px;
 }
 
 .Titles {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
 }
 
 .Titles h1 {
-    font-size: 24px;
-    margin: 0 0 10px 0;
-    color: #123C69;
-    font-family: 'Exo', sans-serif;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  color: #123c69;
+  font-family: "Exo", sans-serif;
 }
 
 .Titles h2 {
-    font-size: 20px;
-    margin: 0 0 5px 0;
-    color: #BAB2B5;
-    font-family: 'Exo', sans-serif;
+  font-size: 20px;
+  margin: 0 0 5px 0;
+  color: #bab2b5;
+  font-family: "Exo", sans-serif;
 }
 
 .Titles p {
-    font-size: 16px;
-    margin: 15px 0 0 0;
-    padding: 0px;
-    font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  margin: 15px 0 0 0;
+  padding: 0px;
+  font-family: "Ubuntu", sans-serif;
 }

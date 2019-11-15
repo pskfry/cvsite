@@ -1,64 +1,51 @@
-@media(min-width: 501px) {
-    .WorkExperience {
-        text-align: left;
-        padding: 25px;
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        font-family: 'Ubuntu', sans-serif;
-    }
-}
-
-@media(max-width: 500px) {
-    .WorkExperience {
-        text-align: left;
-        padding: 25px;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        font-family: 'Ubuntu', sans-serif;
-    }
+.WorkExperience {
+  text-align: left;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Ubuntu", sans-serif;
+  max-width: 500px;
 }
 
 .Titles {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .Titles h1 {
-    color: #123C69;
-    padding-bottom: 5px;
-    margin: 0px;
-    font-family: 'Exo', sans-serif;
+  color: #123c69;
+  padding-bottom: 5px;
+  margin: 0px;
+  font-family: "Exo", sans-serif;
 }
 
 .Titles h3 {
-    color: #BAB2B5;
-    padding-bottom: 5px;
-    margin: 0px;
-    font-family: 'Exo', sans-serif;
+  color: #bab2b5;
+  padding-bottom: 5px;
+  margin: 0px;
+  font-family: "Exo", sans-serif;
 }
 
 .Titles h5 {
-    color: #C0C0C0;
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Exo', sans-serif;
+  color: #c0c0c0;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Exo", sans-serif;
 }
 
 .WorkExperience img {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 5px;
 }
 
 .Tech {
-    background-color: #EEE2DC;
-    color: #AC3B61;
-    margin: 0 auto;
-    padding: 15px;
-    border-radius: 5px;
-    font-family: 'Rokkitt', sans-serif;
+  background-color: #eee2dc;
+  color: #ac3b61;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "Rokkitt", sans-serif;
 }
